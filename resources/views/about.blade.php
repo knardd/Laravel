@@ -1,5 +1,10 @@
 <x-layout>
     <x-slot:title> {{ $title }}</x-slot:title>
-    <h1 class="text-white">Welcome to my About Page</h1>
-        <h1 class="text-white">Nama saya: {{ $name }}</h1>
+    <div class="text-white">
+        @foreach ($teams as $team )
+        <h2>Name: {{ $team->name  }}</h2>
+        <h2>Jabatan: {{ $team->jabatan  }}</h2>
+        <h2>Motivasi: {{ $team->motivasi  }}</h2>
+        @endforeach
+    </div>
 </x-layout>
